@@ -8,4 +8,7 @@
 7. As a user I want to be able to start a new game.
 
 ## Wireframes
-![wireframe-login-signup](https://i.imgur.com/tlZDA3C.png)
+
+![wireframe-login-signup](https://i.imgur.com/ZEGtCFY.png)
+![wireframe-main-page](https://i.imgur.com/aPRXnPA.png)
+![wireframe-player-message](https://i.imgur.com/GxOAp91.png)
