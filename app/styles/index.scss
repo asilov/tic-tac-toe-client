@@ -1,11 +1,83 @@
 @import '~bootstrap/scss/bootstrap';
 
-$black: #000;
+.container {
+  height: 100vh;
+}
 
-.border {
-  border: 3px solid $black;
-  margin: 20px;
-  padding: 20px;
+.centerwhole {
+  margin: auto;
+  text-align: center;
+
+}
+
+.board {
+  margin: auto;
+  max-height: calc(100vh - 75px);
+  max-width: calc(100vh - 75px);
+
+  // set the background image
+  background-image: url('public/corgi.jpg');
+
+  // set the background to take up 100% of the parent's width
+  background-size: cover;
+
+  // center the background so our cat's eyes are directly in the center
+  background-position: center;
+
+  // set the background to never repeat if the image was too small vertically
+  background-repeat: no-repeat;
+
+}
+
+.box {
+
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+
+
+    // 3n selects every third element (box)
+    &:nth-child(3n) {
+        border-right: 0;
+    }
+
+    // select the last 3 elements
+    &:nth-last-child(-1n + 3) {
+        border-bottom: 0;
+
+    }
+
+    // set the minimum height for each box
+    min-height: calc(100% / 3);
+
+    // center the text (x's and o's) in the tic tac toe board
+    display: flex;
+
+    justify-content: center;
+
+    // set the content's position along the cross axis (top to bottom)
+    align-items: center;
+
+    // set the background color to white initially, we will change it to transparent when a box is clicked on
+    background-color: white;
+
+    color: white;
+
+    // make the font larger, take up 15% of the viewport's height
+    font-size: 15vh;
+
+    // to make the text more 3D, we add a shadow 2px below and to the right,
+    // that is black which is 25% transparent
+    text-shadow: 2px 2px rgba(0, 0, 0, .25);
+
+    // when a box is hovered over
+    &:hover {
+        // change the background to the color here
+        background-color: #e2ece9;
+    }
+
+    // user cannot select the text - can't select the X's or O's - when clicking on it
+    user-select: none;
+
 }
 
 // select the section with the id after-sign-in
@@ -13,6 +85,12 @@ $black: #000;
   // make it not display on the page to start off with
   display: none;
 }
+
+.hide {
+  display: none;
+
+}
+
 
 // make the game grid
 #gamegrid {
@@ -22,20 +100,11 @@ $black: #000;
 
 }
 
-.row {
-  // border: 1px solid black;
-  display: flex;
+#gameOver {
+  padding-top: 40px;
 }
 
-// display the game grid with a border and change the height/width
-.row > div {
-  border: 1px solid blue;
-  display: flex;
-  width: 100px;
-  height: 100px;
-}
-
-.hide {
-  display: none;
-
+#winnerOne {
+  position: relative;
+  padding: 10px;
 }
