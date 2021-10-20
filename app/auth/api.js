@@ -1,3 +1,5 @@
+// require the config file so we have our API's url
+
 const config = require('../config')
 
 const store = require('../store')
@@ -18,17 +20,6 @@ const signIn = function (formData) {
   })
 }
 
-const changePassword = function (formData) {
-  return $.ajax({
-    url: `${config.apiUrl}/change-password`,
-    method: 'PATCH',
-    data: formData,
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
-  })
-}
-
 const signOut = function (formData) {
   return $.ajax({
     url: `${config.apiUrl}/sign-out`,
@@ -39,9 +30,20 @@ const signOut = function (formData) {
   })
 }
 
+// function for newGame
+const newGame = function () {
+  return $.ajax({
+    url: `${config.apiUrl}/games`,
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
-  changePassword,
-  signOut
+  signOut,
+  newGame
 }

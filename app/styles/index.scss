@@ -1,1 +1,41 @@
 @import '~bootstrap/scss/bootstrap';
+
+$black: #000;
+
+.border {
+  border: 3px solid $black;
+  margin: 20px;
+  padding: 20px;
+}
+
+// select the section with the id after-sign-in
+#after-sign-in {
+  // make it not display on the page to start off with
+  display: none;
+}
+
+// make the game grid
+#gamegrid {
+  display: flex;
+  flex-direction: column;
+  // border: 1px solid black;
+
+}
+
+.row {
+  // border: 1px solid black;
+  display: flex;
+}
+
+// display the game grid with a border and change the height/width
+.row > div {
+  border: 1px solid blue;
+  display: flex;
+  width: 100px;
+  height: 100px;
+}
+
+.hide {
+  display: none;
+
+}
