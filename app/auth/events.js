@@ -238,9 +238,9 @@ const onClick = function (event) {
     win = checkWinner()
     if (win === true) {
       if (firstPlay === 'O') {
-        $('#winnerOne').text('O is the winner!')
+        $('#winnerOne').text('O has won!')
       } else if (firstPlay === 'X') {
-        $('#winnerOne').text('X is the winner!')
+        $('#winnerOne').text('X has won!')
       }
       $('#gameOver').show()
       $('#winnerOne').show()

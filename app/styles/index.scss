@@ -1,4 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
+body {
+
+  background-color: #eee;
+}
 
 .container {
   height: 100vh;
@@ -7,16 +11,67 @@
 .centerwhole {
   margin: auto;
   text-align: center;
+  margin-top: 300px;
+}
 
+#sign-up {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 30vh;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  float: left;
+  margin: 20px;
+
+  & input {
+    margin: 5px;
+  }
+
+  & fieldset #sign-up-legend {
+    margin-top: 25px;
+  }
+}
+
+#sign-in {
+
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  width: 40%;
+  float: right;
+  margin: 20px;
+
+  & input {
+    margin: 5px;
+  }
+}
+
+* .btn {
+  background-color: #ffb703;
+  border: 1px solid #fb8500;
+  width: 100px;
+  color: #023047;
+
+  &:hover {
+    background-color: #fb8500;
+    color: white;
+  }
 }
 
 .board {
   margin: auto;
-  max-height: calc(100vh - 75px);
-  max-width: calc(100vh - 75px);
+  max-height: calc(70vh - 75px);
+  max-width: calc(70vh - 75px);
 
   // set the background image
-  background-image: url('public/corgi.jpg');
+  // background-image: url('public/corgi.jpg');
+  background-color: #e5e5e5;
 
   // set the background to take up 100% of the parent's width
   background-size: cover;
@@ -60,7 +115,7 @@
     // set the background color to white initially, we will change it to transparent when a box is clicked on
     background-color: white;
 
-    color: white;
+    color: #fca311;
 
     // make the font larger, take up 15% of the viewport's height
     font-size: 15vh;
@@ -92,11 +147,11 @@
 }
 
 
-// make the game grid
+
 #gamegrid {
   display: flex;
   flex-direction: column;
-  // border: 1px solid black;
+
 
 }
 
@@ -107,4 +162,13 @@
 #winnerOne {
   position: relative;
   padding: 10px;
+    font-size: 30px;
+    background: #d62828;
+    color: white;
+    border-radius: 10px;
+}
+
+#newgameshow {
+  margin: 25px;
+  width: 100px;
 }

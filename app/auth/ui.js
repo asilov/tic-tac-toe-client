@@ -6,7 +6,7 @@ const store = require('../store')
 
 const signUpSuccess = function (responseData) {
   // tell the user it was successful
-  $('#games-display').text('Signed up successfully!')
+  $('#games-display').text('Sign up was successful!')
 
   // remove existing classes, then add a green text-success class from bootstrap
   $('#games-display').removeClass()
@@ -19,8 +19,8 @@ const signUpSuccess = function (responseData) {
 }
 
 const signUpFailure = function (error) {
-  // tell the user it was successful
-  $('#error-message').text('Sign up failed')
+  // tell the user it failed
+  $('#error-message').text('Sign up failed!')
 
   // remove existing classes, then add a red text-danger class from bootstrap
   $('#error-message').removeClass()
@@ -31,9 +31,6 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (responseData) {
-  // we are going to add the `user` we got back in our response's data
-  // to the `store` object. So we can access the user's token
-  // later in api.js
 
   store.user = responseData.user
   console.log('store is', store)
@@ -95,7 +92,7 @@ const signOutSuccess = function (responseData) {
   $('#signoutbutton').hide()
   $('#gameOver').hide()
   $('#error-message')
-    .text('Welcome to the game! A new game has started.')
+    .text('A new game has started.')
     .hide()
 
   console.log('responseData is', responseData)

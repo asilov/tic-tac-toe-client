@@ -13,55 +13,56 @@
     </head>
     <body>
       <div class="centerwhole">
-      <h1>Tic Tac Toe Game</h1>
-      <!-- <h3>Welcome to the Game!</h3> -->
+      <h1>Tic Tac Toe</h1>
+      <h3>Let's play the game!</h3>
 
       <section id="before-sign-in">
-        <!-- Sign up form goes here -->
+        <!-- Sign up form -->
         <form id="sign-up">
           <fieldset>
-            <legend>Sign Up</legend>
-            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <legend id="sign-up-legend">Sign Up</legend>
+            <input type="email" name="credentials[email]" placeholder="Email Address" required>
+            <br>
             <input type="password" name="credentials[password]" placeholder="Password" required>
-            <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
-
+             <br>
+            <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+           <br>
             <button class="btn btn-primary">Sign Up</button>
           </fieldset>
 
         </form>
 
-        <!-- Sign in form goes here -->
+        <!-- Sign in form-->
         <form id="sign-in">
           <fieldset>
             <legend>Sign In</legend>
             <input type="email" name="credentials[email]" placeholder="Email" required>
+            <br>
             <input type="password" name="credentials[password]" placeholder="Password" required>
-
-
+            <br>
             <button class="btn btn-primary">Sign In</button>
           </fieldset>
-
-          <br>
-          <br>
-          <br>
         </form>
       </section>
+
+
+
       <!-- After Sign In -->
       <!-- <section id="after-sign-in"> -->
+        <section id="newgameshow" class="hide">
+
+          <form id="new-game">
+            <fieldset>
+
+              <button class="btn btn-primary">Start New Game</button>
+            </fieldset>
+          </form>
+        </section>
+
         <section id="signoutbutton" class="hide">
         <form id="sign-out">
           <fieldset>
-            <legend>Sign Out</legend>
             <button class="btn btn-primary">Sign Out</button>
-          </fieldset>
-        </form>
-      </section>
-      <section id="newgameshow" class="hide">
-        <h4>Play a Tic Tac Toe Game!</h4>
-        <form id="new-game">
-          <fieldset>
-            <!-- <legend>New Game</legend> -->
-            <button class="btn btn-primary">New Game</button>
           </fieldset>
         </form>
       </section>
@@ -69,9 +70,20 @@
       <!-- After New Game Start-->
 
       <section id="after-new-game" class="hide container">
-        <h4>Have fun!</h4>
-        <h4>Play a Tic Tac Toe Game!</h4>
-        <!-- <div id="gamegrid"> -->
+        <!-- After game ends -->
+    <section id="gameOver" class="hide">
+      <form id="resetGame">
+        <fieldset>
+          <!-- <legend>New Game</legend> -->
+          <button class="btn btn-primary">Restart Game</button>
+        </fieldset>
+      </form>
+  </section>
+  <br>
+<div id="winnerOne">
+        </div>
+        <br>
+
           <div class="row h-100 board">
           <!-- adding a second class 'play' and can refer to all of the divs/cells by adding the class -->
             <div class="col-4 play1 play box"></div>
@@ -91,8 +103,7 @@
         </div> -->
       </div>
 
-        <div id="winnerOne">
-        </div>
+
     </section>
 
     <!-- After game ends -->
