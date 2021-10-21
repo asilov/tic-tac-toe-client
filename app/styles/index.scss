@@ -1,7 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 body {
-
-  background-color: #eee;
+  background-color: #56baed;
 }
 
 .container {
@@ -68,10 +67,11 @@ body {
   margin: auto;
   max-height: calc(70vh - 75px);
   max-width: calc(70vh - 75px);
+  border-radius: 15px;
+  // set the background color
+  background-color: #56baed;
 
-  // set the background image
-  // background-image: url('public/corgi.jpg');
-  background-color: #e5e5e5;
+
 
   // set the background to take up 100% of the parent's width
   background-size: cover;
@@ -86,8 +86,9 @@ body {
 
 .box {
 
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-right: 5px solid #56baed;
+    border-bottom: 5px solid #56baed;
+    border-radius: 15px;
 
 
     // 3n selects every third element (box)
@@ -115,10 +116,10 @@ body {
     // set the background color to white initially, we will change it to transparent when a box is clicked on
     background-color: white;
 
-    color: #fca311;
+    color: #56baed;
 
     // make the font larger, take up 15% of the viewport's height
-    font-size: 15vh;
+    font-size: 10vh;
 
     // to make the text more 3D, we add a shadow 2px below and to the right,
     // that is black which is 25% transparent
