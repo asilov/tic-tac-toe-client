@@ -1,13 +1,14 @@
 'use strict'
 
-// require the config file, so we have our API's url
+// require the config file to get our API's url
 const config = require('../config')
 
+
 // require the store file, so we have access to the store object
-// so that we had the user's token when making authenticated requests
 const store = require('../store')
 
-// formData will be our credentials object w/ email, password, and confirmation
+
+// formData will be our credentials object with email, password, and confirmation
 const signUp = function (formData) {
   // make a request to POST /sign-up
   return $.ajax({
@@ -18,6 +19,7 @@ const signUp = function (formData) {
     data: formData
   })
 }
+
 
 // formData will be our credentials object w/ email, password
 const signIn = function (formData) {
@@ -31,12 +33,14 @@ const signIn = function (formData) {
   })
 }
 
-// create a function for signOut
+
+// function for signOut
 const signOut = function () {
   // make a request to POST /sign-up
   return $.ajax({
     url: `${config.apiUrl}/sign-out`,
     method: 'DELETE',
+
     // Add our authorization header, so the api can use the token
     // to know who is trying to sign out
     headers: {
@@ -55,6 +59,7 @@ const newGame = function () {
     }
   })
 }
+
 
 module.exports = {
   signUp,
