@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div class="centerwhole">
+      <h1>Tic Tac Toe</h1>
+      <h3>Let's play the game!</h3>
+
+      <section id="before-sign-in">
+        <!-- Sign up form -->
+        <form id="sign-up">
+          <fieldset>
+            <legend id="sign-up-legend">Sign Up</legend>
+            <input type="email" name="credentials[email]" placeholder="Email Address" required>
+            <br>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+             <br>
+            <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+           <br>
+            <button class="btn btn-primary">Sign Up</button>
+          </fieldset>
+
+        </form>
+
+        <!-- Sign in form-->
+        <form id="sign-in">
+          <fieldset>
+            <legend>Sign In</legend>
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <br>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+            <br>
+            <button class="btn btn-primary">Sign In</button>
+          </fieldset>
+        </form>
+      </section>
+
+
+
+      <!-- After Sign In -->
+      <!-- <section id="after-sign-in"> -->
+        <section id="newgameshow" class="hide">
+
+          <form id="new-game">
+            <fieldset>
+
+              <button class="btn btn-primary">Start New Game</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <section id="signoutbutton" class="hide">
+        <form id="sign-out">
+          <fieldset>
+            <button class="btn btn-primary">Sign Out</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- After New Game Start-->
+
+      <section id="after-new-game" class="hide container">
+        <!-- After game ends -->
+    <section id="gameOver" class="hide">
+      <form id="resetGame">
+        <fieldset>
+          <!-- <legend>New Game</legend> -->
+          <button class="btn btn-primary">Restart Game</button>
+        </fieldset>
+      </form>
+  </section>
+  <br>
+<div id="winnerOne">
+        </div>
+        <br>
+
+          <div class="row h-100 board">
+          <!-- adding a second class 'play' and can refer to all of the divs/cells by adding the class -->
+            <div class="col-4 play1 play box"></div>
+            <div class="col-4 play2 play box"></div>
+            <div class="col-4 play3 play box"></div>
+          <!-- </div> -->
+          <!-- <div class="row"> -->
+            <div class="col-4 play4 play box"></div>
+            <div class="col-4 play5 play box"></div>
+            <div class="col-4 play6 play box"></div>
+          <!-- </div>
+          <div class="row"> -->
+            <div class="col-4 play7 play box"></div>
+            <div class="col-4 play8 play box"></div>
+            <div class="col-4 play9 play box"></div>
+          <!-- </div>
+        </div> -->
+      </div>
+
+
+    </section>
+
+    <!-- After game ends -->
+    <section id="gameOver" class="hide">
+      <form id="resetGame">
+        <fieldset>
+          <!-- <legend>New Game</legend> -->
+          <button class="btn btn-primary">Reset</button>
+        </fieldset>
+      </form>
+  </section>
+
+
+      <!-- create a section for our user feedback -->
+      <section>
+        <div id="error-message"> </div>
+        <div id="games-display"> </div>
+      </section>
+    </div>
+    </body>
+</html>
