@@ -1,15 +1,17 @@
 'use strict'
 
-// require the getFormFields function, to get data from our forms
+
+// require the getFormFields function
 const getFormFields = require('../../lib/get-form-fields')
 
-// require our api auth functions
+
+// require api auth functions
 const api = require('./api')
-// require our ui functions to update the page
+
+// require our ui functions
 const ui = require('./ui')
 
 const onSignUp = function (event) {
-  // prevent the default action of refreshing the page
   event.preventDefault()
 
   // event.target is the form that caused the 'submit' event
@@ -17,13 +19,9 @@ const onSignUp = function (event) {
   // get the data from our form element
   const formData = getFormFields(form)
 
-  // we pass in the formData because it will need the info like email, password etc
-  // make a POST /sign-up request, pass it the email/password/confirmation
   api
     .signUp(formData)
-    // if our sign up request is successful, run the signUpSuccess function
     .then(ui.signUpSuccess)
-    // otherwise, if an error occurred, run a signUpFailure function
     .catch(ui.signUpFailure)
 }
 
@@ -31,10 +29,12 @@ const onSignIn = function (event) {
   // prevent the default action of refreshing the page
   event.preventDefault()
 
+
   // event.target is the form that caused the 'submit' event
   const form = event.target
   // get the data from our form element
   const formData = getFormFields(form)
+
 
   // we pass in the formData because it will need the info like email, password etc
   // make a POST /sign-up request, pass it the email/password/confirmation
@@ -46,9 +46,11 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+
 const onSignOut = function (event) {
   // prevent the default action of refreshing the page
   event.preventDefault()
+
 
   // we pass in the formData because it will need the info like email, password etc
   // make a POST /sign-up request, pass it the email/password/confirmation
@@ -61,6 +63,7 @@ const onSignOut = function (event) {
 }
 // make a variable to check the winner of the game
 // we will have to do this for every possible winning combo - so 8 total
+
 
 const checkWinner = function () {
   // check if each possible win combo is there and for X or O
@@ -217,6 +220,7 @@ const onNewGame = function (event) {
   $('#winnerOne').hide()
 }
 
+
 // define a variable for the first move, but make it the opposite so the first move is X
 let firstPlay = 'O'
 const onClick = function (event) {
@@ -248,6 +252,7 @@ const onClick = function (event) {
   }
 }
 
+
 // reset the game board after a winner/tie game
 const onNewGameReset = function (event) {
   firstPlay = 'O'
@@ -271,8 +276,7 @@ const onNewGameReset = function (event) {
     .then(ui.newGameStart)
 }
 
-// export our event handler functions, so we can use them
-// in app.js
+
 module.exports = {
   onSignUp,
   onSignIn,

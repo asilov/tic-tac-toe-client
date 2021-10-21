@@ -1,8 +1,8 @@
 'use strict'
 
-// require the store object. We will use it to share data
-// between different files
+// require the store object
 const store = require('../store')
+
 
 const signUpSuccess = function (responseData) {
   // tell the user it was successful
